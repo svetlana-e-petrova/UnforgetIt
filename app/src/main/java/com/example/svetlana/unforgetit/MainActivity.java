@@ -3,6 +3,7 @@ package com.example.svetlana.unforgetit;
 import android.app.DialogFragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
@@ -70,6 +71,10 @@ public class MainActivity extends AppCompatActivity implements AddingTaskDialogF
         runSplash();
 
         setUI();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
     }
 
     @Override
