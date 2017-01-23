@@ -68,7 +68,7 @@ public abstract class TaskAdapter extends RecyclerView.Adapter<RecyclerView.View
             items.remove(location);
             notifyItemRemoved(location);
 
-            if (location >= 1 && location <= getItemCount()
+            if (location >= 1 && location <= getItemCount() - 1
                     && !getItem(location).isTask() && !getItem(location - 1).isTask()) {
                 ModelSeparator separator = (ModelSeparator) getItem(location - 1);
                 offSeparator(separator.getType());
