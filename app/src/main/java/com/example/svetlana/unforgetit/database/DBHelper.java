@@ -24,7 +24,7 @@ public class DBHelper extends SQLiteOpenHelper {
             + TASK_DATE_COLUMN + " LONG, " + TASK_TIME_STAMP_COLUMN + " LONG, "
             + TASK_PRIORITY_COLUMN + " INTEGER, " + TASK_STATUS_COLUMN + " INTEGER);";
 
-    public static final String SELECTION_STATUS = DBHelper.TASK_STATUS_COLUMN + " = ?";
+    public static final String SELECTION_STATUS = TASK_STATUS_COLUMN + " = ?";
     public static final String SELECTION_TIME_STAMP = TASK_TIME_STAMP_COLUMN + " = ?";
     public static final String SELECTION_LIKE_TITLE = TASK_TITLE_COLUMN + " LIKE ?";
 

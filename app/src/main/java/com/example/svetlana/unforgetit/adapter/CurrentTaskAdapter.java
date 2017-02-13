@@ -12,11 +12,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.svetlana.unforgetit.R;
-import com.example.svetlana.unforgetit.Utils;
 import com.example.svetlana.unforgetit.fragment.CurrentTaskFragment;
 import com.example.svetlana.unforgetit.model.Item;
 import com.example.svetlana.unforgetit.model.ModelSeparator;
 import com.example.svetlana.unforgetit.model.ModelTask;
+import com.example.svetlana.unforgetit.utils.DateUtils;
 
 import java.util.Calendar;
 
@@ -68,7 +68,7 @@ public class CurrentTaskAdapter extends TaskAdapter {
 
             taskViewHolder.title.setText(task.getTitle());
             if (task.getDate() != 0) {
-                taskViewHolder.date.setText(Utils.getFullDate(task.getDate()));
+                taskViewHolder.date.setText(DateUtils.getFullDate(task.getDate()));
             } else {
                 taskViewHolder.date.setText(null);
             }

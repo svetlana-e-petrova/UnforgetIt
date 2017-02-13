@@ -20,9 +20,9 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 
 import com.example.svetlana.unforgetit.R;
-import com.example.svetlana.unforgetit.Utils;
 import com.example.svetlana.unforgetit.alarm.AlarmHelper;
 import com.example.svetlana.unforgetit.model.ModelTask;
+import com.example.svetlana.unforgetit.utils.DateUtils;
 
 import java.util.Calendar;
 
@@ -92,8 +92,8 @@ public class EditTaskDialogFragment extends DialogFragment {
         etTitle.setText(task.getTitle());
         etTitle.setSelection(etTitle.length());
         if (task.getDate() != 0) {
-            etDate.setText(Utils.getDate(task.getDate()));
-            etTime.setText(Utils.getTime(task.getDate()));
+            etDate.setText(DateUtils.getDate(task.getDate()));
+            etTime.setText(DateUtils.getTime(task.getDate()));
         }
 
         tilTitle.setHint(getResources().getString(R.string.task_title));
@@ -139,7 +139,7 @@ public class EditTaskDialogFragment extends DialogFragment {
                         calendar.set(Calendar.YEAR, year);
                         calendar.set(Calendar.MONTH, month);
                         calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                        etDate.setText(Utils.getDate(calendar.getTimeInMillis()));
+                        etDate.setText(DateUtils.getDate(calendar.getTimeInMillis()));
                     }
 
                     @Override
@@ -164,7 +164,7 @@ public class EditTaskDialogFragment extends DialogFragment {
                         calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
                         calendar.set(Calendar.MINUTE, minute);
                         calendar.set(Calendar.SECOND, 0);
-                        etTime.setText(Utils.getTime(calendar.getTimeInMillis()));
+                        etTime.setText(DateUtils.getTime(calendar.getTimeInMillis()));
                     }
 
                     @Override

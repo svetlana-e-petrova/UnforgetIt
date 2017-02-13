@@ -1,8 +1,8 @@
-package com.example.svetlana.unforgetit;
+package com.example.svetlana.unforgetit.utils;
 
 import java.text.SimpleDateFormat;
 
-public class Utils {
+public class DateUtils {
 
     public static String getDate(long date) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yy");

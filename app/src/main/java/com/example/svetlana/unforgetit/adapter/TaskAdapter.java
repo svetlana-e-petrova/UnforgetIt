@@ -82,6 +82,11 @@ public abstract class TaskAdapter extends RecyclerView.Adapter<RecyclerView.View
                 items.remove(locationTemp);
                 notifyItemRemoved(locationTemp);
             }
+
+            switch ("abc") {
+                case "a":
+                case "b":
+            }
         }
     }
 

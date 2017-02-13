@@ -81,8 +81,8 @@ public class CurrentTaskFragment extends TaskFragment {
             }
         }
 
-        if (position != -1) {
 
+        if (position != -1) {
             if (!adapter.getItem(position - 1).isTask()) {
                 if (position >= 2 && adapter.getItem(position - 2).isTask()) {
                     ModelTask task = (ModelTask) adapter.getItem(position - 2);
