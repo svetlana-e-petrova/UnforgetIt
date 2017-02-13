@@ -28,7 +28,7 @@ public class DataBaseJDBCHelper extends SQLiteOpenHelper {
         return (helper = helper == null ? new DataBaseJDBCHelper(context) : helper);
     }
 
-    public DataBaseJDBCHelper(Context context) {
+    private DataBaseJDBCHelper(Context context) {
         super(context, TaskRepository.DATABASE_NAME, null, DATABASE_VERSION);
     }
 
